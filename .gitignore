@@ -1,0 +1,15 @@
+# dependencies
+node_modules/
+
+# builds
+/dist/
+/build/
+/coverage/
+
+# env
+.env
+.env.*
+
+# editors/os
+.vscode/
+.DS_Store
