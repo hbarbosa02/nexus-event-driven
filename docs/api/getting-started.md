@@ -4,9 +4,9 @@
 
 Antes de começar, certifique-se de ter instalado:
 
-- **Node.js** >= 18.0.0
+- **Node.js** >= 22.20.0
 - **PostgreSQL** >= 14
-- **npm** >= 8.0.0
+- **npm** >= 10.8.2
 
 ## Instalação
 
