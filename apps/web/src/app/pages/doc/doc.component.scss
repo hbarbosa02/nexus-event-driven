@@ -1,0 +1,96 @@
+.doc-page {
+  padding: 2rem 0;
+}
+
+.doc-layout {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 2rem;
+  min-height: 600px;
+}
+
+.doc-sidebar {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: fit-content;
+}
+
+.doc-nav h3 {
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.doc-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.doc-nav li {
+  margin-bottom: 0.5rem;
+}
+
+.doc-nav a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #7f8c8d;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background-color: #f8f9fa;
+    color: #667eea;
+  }
+  
+  &.active {
+    background-color: #667eea;
+    color: white;
+  }
+}
+
+.doc-content {
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.doc-section h1 {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.doc-welcome {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.doc-welcome h1 {
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.doc-welcome p {
+  color: #7f8c8d;
+  font-size: 1.125rem;
+}
+
+@media (max-width: 768px) {
+  .doc-layout {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .doc-sidebar {
+    order: 2;
+  }
+  
+  .doc-content {
+    order: 1;
+    padding: 1rem;
+  }
+}

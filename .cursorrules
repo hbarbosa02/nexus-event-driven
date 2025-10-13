@@ -1,0 +1,41 @@
+# Regras do Projeto Nexus Event Driven
+
+Sempre consulte os seguintes documentos antes de implementar novas funcionalidades:
+
+## Arquitetura e Padrões
+- docs/architecture.md - Arquitetura completa do sistema
+- docs/code-standards.md - Padrões de código e ferramentas
+- docs/patterns/nestjs-patterns.md - Padrões específicos do NestJS
+- docs/patterns/angular-patterns.md - Padrões específicos do Angular
+
+## Guias de Desenvolvimento
+- docs/guides/naming-conventions.md - Convenções de nomenclatura
+- docs/guides/folder-structure.md - Estrutura de pastas
+- docs/development.md - Guia de desenvolvimento
+
+## Tecnologias
+- Backend: NestJS + TypeORM + PostgreSQL
+- Frontend: Angular v20.2 + TypeScript
+- Validação: Zod schemas
+- Padrões: Either, Criteria, BaseController, BaseRepository
+
+## Regras Importantes
+
+### Código
+- Sempre use tipos explícitos, nunca `any`
+- Use `Either<Error, Success>` para operações que podem falhar
+- Siga as convenções de nomenclatura estabelecidas
+- Use JSDoc apenas para APIs públicas
+- Evite comentários desnecessários - código deve ser autoexplicativo
+
+### Estrutura
+- Siga a estrutura modular por domínio
+- Use BaseController para endpoints com paginação
+- Use ZodValidationPipe para validação de entrada
+- Sempre retorne Either nos services
+- Use BaseEntity para todas as entidades
+
+### Padrões de Framework
+- NestJS: Controllers, Services, Repositories seguindo padrões estabelecidos
+- Angular: Standalone components, lazy loading, service layer
+- TypeScript: Interfaces para objetos extensíveis, types para unions

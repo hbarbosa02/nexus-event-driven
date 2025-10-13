@@ -1,7 +1,7 @@
 {
-  "name": "monorepo-project",
+  "name": "nexus-event-driven",
   "version": "1.0.0",
-  "description": "Monorepo com projetos API e WEB",
+  "description": "Sistema de gerenciamento de eventos nativos do Node.js com NestJS e Angular",
   "private": true,
   "workspaces": [
     "apps/*",
@@ -9,21 +9,47 @@
   ],
   "scripts": {
     "dev": "concurrently \"npm run dev:api\" \"npm run dev:web\"",
-    "dev:api": "npm run dev --workspace=apps/api",
-    "dev:web": "npm run dev --workspace=apps/web",
+    "dev:api": "npm run start:dev --workspace=apps/api",
+    "dev:web": "npm run start --workspace=apps/web",
     "build": "npm run build --workspaces",
     "build:api": "npm run build --workspace=apps/api",
     "build:web": "npm run build --workspace=apps/web",
-    "start": "npm run start --workspace=apps/api",
+    "start": "npm run start:prod --workspace=apps/api",
     "test": "npm run test --workspaces",
+    "test:api": "npm run test --workspace=apps/api",
+    "test:web": "npm run test --workspace=apps/web",
     "lint": "npm run lint --workspaces",
-    "clean": "npm run clean --workspaces && rm -rf node_modules"
+    "lint:api": "npm run lint --workspace=apps/api",
+    "lint:web": "npm run lint --workspace=apps/web",
+    "clean": "npm run clean --workspaces && rm -rf node_modules",
+    "install:all": "npm install && npm install --workspaces",
+    "database:migrate": "npm run migration:run --workspace=apps/api",
+    "database:generate": "npm run migration:generate --workspace=apps/api",
+    "database:revert": "npm run migration:revert --workspace=apps/api",
+    "database:seed": "npm run migration:seed --workspace=apps/api",
+    "docker:up": "docker compose up -d",
+    "docker:down": "docker compose down",
+    "docker:logs:api": "docker compose logs -f api",
+    "docker:logs:web": "docker compose logs -f web",
+    "docker:logs:db": "docker compose logs -f postgres",
+    "docker:reset:db": "docker compose down -v",
+    "docker:migrate": "docker compose exec api npm run database:migrate"
   },
   "devDependencies": {
-    "concurrently": "^8.2.2"
+    "concurrently": "9.2.1"
   },
   "engines": {
-    "node": ">=18.0.0",
-    "npm": ">=8.0.0"
-  }
+    "node": ">=22.20.0",
+    "npm": ">=10.8.2"
+  },
+  "keywords": [
+    "nestjs",
+    "angular",
+    "typescript",
+    "eventemitter",
+    "monorepo",
+    "nodejs"
+  ],
+  "author": "Nexus Event Driven Team",
+  "license": "MIT"
 }
