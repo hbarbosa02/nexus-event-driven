@@ -135,3 +135,13 @@ dist
 # OS
 .DS_Store
 Thumbs.db
+
+./apps/api/dist
+./apps/web/dist
+./apps/api/node_modules
+./apps/web/node_modules
+./apps/api/dist
+./apps/web/dist
+./apps/api/node_modules
+./apps/web/node_modules
+./apps/web/.angular
