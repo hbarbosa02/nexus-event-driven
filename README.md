@@ -43,11 +43,6 @@ nexus-event-driven/
 
 ## 🚀 Início Rápido
 
-### Pré-requisitos
-- **Node.js** >= 18.0.0
-- **PostgreSQL** >= 14
-- **npm** >= 8.0.0
-
 ### Instalação
 ```bash
 # Clone o repositório
